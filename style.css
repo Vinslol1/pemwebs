@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+.about-slide {
+    scroll-snap-align: start; 
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.about-wrapper {
+    display: flex;
+    width: 450vw;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    background-color: #000;
+}
+
+.about-container {
+    height: 100vw;
+    width: 100vh;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth; 
+}
+
+
+
+.about-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    
+    background-size: cover;
+    z-index: -100;
+}
+
+#floatingButton {
+    position: sticky;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    z-index: 10;
+  }
+
+.l1{
+    z-index: 4;
+    background-image: url(Artboard1.png);
+}
+
+.l2{
+    z-index: 3;
+    background-image: url(Artboard2.png);
+}
+
+.l3{
+    z-index: 2;
+    background-image: url(Artboard3.png);
+}
+
+.l4{
+    z-index: 1;
+    background-image: url(Artboard4.png);
+}
+
+.l5{
+    z-index: 1;
+    background-image: url(Artboard5.png);
+}
+
+.l6{
+    z-index: 2;
+    background-image: url(Artboard6.png);
+}
+
+.l7{
+    z-index: 3;
+    background-image: url(Artboard7.png);
+}
+
+.l8{
+    z-index: 4;
+    background-image: url(Artboard8.png);
+}
+.l9{
+    z-index: 0;
+    background-image: url(Artboard9.png);
+}
+
+
+
+.s1{
+    background-color: #242424;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+.s2{
+    background-color: #242424;
+    z-index: -1;
+    transition: background-color 0.5s ease-out;
+}
+
+.s3{
+    background-color: red;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+.s4{
+    background-color: blue;
+    z-index: -1;
+    transition: background-color 0.5s ease-out;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* ---------------------------------------------------------- */
+
+
+.trend-main {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+}
+
+.trend-container {
+    width: 70%;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}   
+
+.trend-title h1{
+    color: azure;
+    margin-top: 20px;
+    font-size: 100px;
+    font-weight: 700;
+    padding: 100px;
+}
+
+.trend-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+#card-width {
+    width: 100%;
+    margin: 150px 0 150px 0;
+}
+
+.card-body {
+    color: white;
+}
+
+.card-text {
+    padding: 0px 150px 0px 150px;
+}
+
+.card-img-top {
+    height: 500px;
+}
