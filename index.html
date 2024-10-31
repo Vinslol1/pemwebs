@@ -9,28 +9,36 @@
     
 </head>
 <body onscroll="myFunction()">
-    <button id="floatingButton" onclick="scrollToNextSection()">
-        <a>testing</a>
+    
+
+    <button style="position: absolute; left: 0;" id="floatingButton" onclick="scrollToPrevSection()">
+        <a><</a>
+    </button> 
+
+    <button style="position: absolute; right: 0;"id="floatingButton" onclick="scrollToNextSection()">
+        <a>></a>
     </button>
-
-    <a href="Registrasi/log.html">
-        <button class="login-button">Login</button>
-    </a>
-
+    
+        <a href="Registrasi/log.html">
+            <button class="login-button">Login</button>
+        </a>    
     
     <div class="about-container">
         <div class="about-wrapper">
-            <div class="global-button">
-                <button class="global-left-btn">Left</button>
-                <button class="global-right-btn">Right</button>
-              </div>
+            
             <section class="about-slide s1" id = "s1">
+                <div class="Hder" id="Hderid"></div>
                 <div class="about-layer l1">
-                    <a href ="">SILHOUETTE 
-                        <span> SKYLINE</span>
-                    </a>
+                    <img style=" position: absolute;width: 100vw; height: 100vh; z-index: 5;animation-delay: 10s;" src="img/rain_weather_transpa.gif" alt="">
+                    
+                    
+                </div> 
+                <div class="about-layer l2"><img id="thunderGif" style="position: absolute; width: 30vw; height: 110vh; z-index: 3; left: 120px; display: none;" src="img/Thunder1.gif" alt="">
+                <a style="z-index: 2;"class="about-text" style="color: white">WELCOME TO 
+                    <span style = "color: blue; font-family: 'Franklin Gothic Heavy';"> <b>COMBRI</b></span>
+                </a>
                 </div>
-                <div class="about-layer l2"></div>
+                
                 <div class="about-layer l3"></div>
                 <div class="about-layer l4"></div>
                 <div class="about-layer l5"></div>
@@ -42,13 +50,16 @@
 
             
             <section class="about-slide s2 trend-main" id="s2">
+                <div class="trend-bg"></div>
+                <div class="trend-water-bg"></div>
+                
                 <div class="trend-container">
                     <div class="trend-title">
                         <h1>What's Trending?</h1>
                     </div>
         
                     <div class="card" id="card-width" data-bs-theme="dark">
-                        <img src="img/Knife/knifezer-pisau-self-defense-knife-survival-tool-coldsteel-straight-17t.jpg" class="card-img-top" alt="Gambar">
+                        <img src="img/Knife/Knife3.jpg" class="card-img-top" alt="Gambar">
         
                         <div class="card-body" data-bs-theme="dark">
                             <h5 class="card-title">Card title</h5>
@@ -59,7 +70,7 @@
                     </div>
         
                     <div class="card" id="card-width" data-bs-theme="dark">
-                        <img src="img/download.jpeg" class="card-img-top" alt="Gambar">
+                        <img src="img/Sport/Sport1.jpeg" class="card-img-top" alt="Gambar">
         
                         <div class="card-body" data-bs-theme="dark">
                             <h5 class="card-title">Card title</h5>
@@ -70,7 +81,7 @@
                     </div>
         
                     <div class="card" id="card-width" data-bs-theme="dark">
-                        <img src="img/images.jpeg" class="card-img-top" alt="Gambar">
+                        <img src="img/Technology/Technology1.jpeg" class="card-img-top" alt="Gambar">
         
                         <div class="card-body" data-bs-theme="dark">
                             <h5 class="card-title">Card title</h5>
@@ -82,12 +93,39 @@
                 </div>
         </section>
 
-        <section class="about-slide s3" id="s3">    </section>
-        <section class="about-slide s4" id="s4"></section>
+        <section class="about-slide s3" id="s3">
+            <div class="category-container">
+                <h1 class="category-heading">Combine Images from Multiple Categories</h1>
+                
+                <input list="folderList" id="searchInput" placeholder="Enter folder name..." />
+                <datalist id="folderList"></datalist>
+                <button class="category-button" onclick="addFolder()">Add Category</button>
+                <button class="category-button" onclick="searchFolders()">Search Category</button>
+            
+                <div id="selectedFolders">
+                    <strong>Selected Categories:</strong> 
+                    <span id="foldersList">None</span>
+                </div>
+            
+                <div id="imageContainer">
+                    <!-- Image will be displayed here -->
+                </div>
+            
+                <div id="category-controls">
+                    <button class="category-button" id="prevButton" onclick="prevImage()">Previous</button>
+                    <button class="category-button" id="nextButton" onclick="nextImage()">Next</button>
+                </div>
+            </div>
+        </section>
+
 
 
         </div>
     </div>
+    
+    <div class="cursor animate"></div>
+
+
     <script src="script.js"></script>
 
 </body>
