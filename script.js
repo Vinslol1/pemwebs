@@ -288,3 +288,7 @@ function toggleGif() {
 
   // Run toggleGif every 5 seconds
   setInterval(toggleGif, 5000);
+
+
+
+//Test sync github
